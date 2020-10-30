@@ -1,5 +1,5 @@
 <template>
-    <button class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{text}}</button>
+    <button class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 bg-gray-200">{{text}}</button>
 </template>
 
 <script>

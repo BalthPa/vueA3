@@ -6,7 +6,8 @@
         </div>
         <div class="px-6 pt-4 pb-2">
           <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{classe.category}}</span>
-          <button @click="DeleteClasses" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Delete</button>
+          <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" :class="whichDifficulty">{{classe.difficulty}}</span>
+          <button @click="DeleteClasses" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Supprimer</button>
         </div>
 
   </div>
@@ -30,7 +31,15 @@ export default {
         }
           return "bg-yellow-500"
       },
-
+      whichDifficulty(){
+          if(this.classe.difficulty == "Facile"){
+              return "bg-green-600"
+          }
+          else if(this.classe.difficulty == "Moyen"){
+              return "bg-orange-600"
+          }
+          return "bg-red-700"
+      },
       isDone(){
           if (this.classe.done == "Complété"){
               return "bg-green-300"
