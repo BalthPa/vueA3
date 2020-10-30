@@ -1,12 +1,12 @@
 <template>
-   <div class="rounded overflow-hidden shadow-lg" :class="whichCategory">
+    <div class="rounded overflow-hidden shadow-lg" :class="whichCategory">
         <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">{{classe.name}}</div>
             <p class="text-white text-base">{{classe.description}}</p>
         </div>
         <div class="px-6 pt-4 pb-2">
           <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{classe.category}}</span>
-              <classes-button text="Choisir" @click="classeDone" class="bg-red-300"></classes-button>
+          <button @click="DeleteClasses" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Delete</button>
         </div>
 
   </div>
@@ -15,7 +15,7 @@
 <script>
 
 export default {
-    name: "classes-card",
+    name: "done-cards",
     props: ['classe'],
     computed: {
       whichCategory(){
@@ -30,12 +30,18 @@ export default {
         }
           return "bg-yellow-500"
       },
+
+      isDone(){
+          if (this.classe.done == "Complété"){
+              return "bg-green-300"
+          }
+            return "bg-red-300"
+      }
     },
     methods:{
-      classeDone(){
-        this.$emit('classes-done', this.classe)
-        this.isDone
-      }
+        DeleteClasses(classe){
+            this.$emit('delete-classes', classe)
+        }
     }
 }
 </script>
