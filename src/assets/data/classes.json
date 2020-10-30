@@ -1,0 +1,40 @@
+{
+  "name": "Cours",
+  "classes": [
+    {
+      "name": "Les bases de l'HTML5",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "category": "Dev",
+      "difficulty": "Facile",
+      "done": "Pas complété"
+    },
+    {
+      "name": "Initiation à Adobe XD",
+      "description": "Cras interdum dui nec erat malesuada, id viverra urna venenatis.",
+      "category": "Créa",
+      "difficulty": "Facile",
+      "done": "Pas complété"
+    },
+    {
+      "name": "Fonctionnalités avancées en NodeJs",
+      "description" : "Nam nisl lacus, gravida vel dolor vel, feugiat mattis ligula.",
+      "category": "Dev",
+      "difficulty": "Moyen",
+      "done": "Complété"
+    },
+    {
+      "name": "Initiation à Wordpress",
+      "description" : "Aliquam luctus viverra erat et posuere. Suspendisse potenti.",
+      "category": "Dev",
+      "difficulty": "Facile",
+      "done": "Complété"
+    },
+    {
+      "name": "Initiation à 3DS Max",
+      "description" : "Aliquam luctus viverra erat et posuere. Suspendisse potenti.",
+      "category": "3D",
+      "difficulty": "Facile",
+      "done": "Pas complété"
+    }
+  ]
+}
